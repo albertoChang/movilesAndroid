@@ -1,4 +1,4 @@
-package suppbook.app.albertochang.com.testapp.View;
+package suppbook.app.albertochang.com.testapp.Main;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,9 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import suppbook.app.albertochang.com.testapp.Interface.MainInterface;
-import suppbook.app.albertochang.com.testapp.Presenter.MainPresenter;
 import suppbook.app.albertochang.com.testapp.R;
+import suppbook.app.albertochang.com.testapp.Home.PrincipalActivity;
 
 public class MainActivity extends AppCompatActivity implements MainInterface.View{
 

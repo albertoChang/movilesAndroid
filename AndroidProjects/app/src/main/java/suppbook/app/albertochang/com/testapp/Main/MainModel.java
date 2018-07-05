@@ -1,4 +1,4 @@
-package suppbook.app.albertochang.com.testapp.Model;
+package suppbook.app.albertochang.com.testapp.Main;
 
 import android.support.v7.app.AppCompatActivity;
 
@@ -6,7 +6,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import suppbook.app.albertochang.com.testapp.Interface.MainInterface;
+import suppbook.app.albertochang.com.testapp.Model.User;
 
 public class MainModel extends AppCompatActivity implements MainInterface.Model {
 

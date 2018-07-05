@@ -1,4 +1,4 @@
-package suppbook.app.albertochang.com.testapp.View;
+package suppbook.app.albertochang.com.testapp.Home;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

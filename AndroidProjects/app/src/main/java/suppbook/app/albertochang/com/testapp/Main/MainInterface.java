@@ -1,4 +1,4 @@
-package suppbook.app.albertochang.com.testapp.Interface;
+package suppbook.app.albertochang.com.testapp.Main;
 
 public interface MainInterface {
 

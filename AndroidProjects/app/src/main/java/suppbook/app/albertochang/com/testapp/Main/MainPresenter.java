@@ -1,9 +1,9 @@
-package suppbook.app.albertochang.com.testapp.Presenter;
+package suppbook.app.albertochang.com.testapp.Main;
 
 import android.text.TextUtils;
 
-import suppbook.app.albertochang.com.testapp.Interface.MainInterface;
-import suppbook.app.albertochang.com.testapp.Model.MainModel;
+import suppbook.app.albertochang.com.testapp.Main.MainInterface;
+import suppbook.app.albertochang.com.testapp.Main.MainModel;
 
 public class MainPresenter implements MainInterface.Presenter{
 
