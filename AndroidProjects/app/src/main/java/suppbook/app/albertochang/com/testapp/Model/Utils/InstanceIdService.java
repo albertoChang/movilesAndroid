@@ -1,4 +1,4 @@
-package suppbook.app.albertochang.com.testapp.Model.objetos.Utils;
+package suppbook.app.albertochang.com.testapp.Model.Utils;
 
 import android.content.SharedPreferences;
 
@@ -25,7 +25,7 @@ public class InstanceIdService extends FirebaseInstanceIdService {
     }
 
     private void sendToServer(String token) {
-        settings = getApplicationContext().getSharedPreferences("TAXICAB", MODE_PRIVATE);
+        settings = getApplicationContext().getSharedPreferences("TestApp", MODE_PRIVATE);
         editor = settings.edit();
         editor.putString("token", token);
         editor.commit();

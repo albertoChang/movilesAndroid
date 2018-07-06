@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 import suppbook.app.albertochang.com.testapp.R;
 import suppbook.app.albertochang.com.testapp.Home.PrincipalActivity;
 
@@ -16,7 +18,7 @@ public class MainActivity extends AppCompatActivity implements MainInterface.Vie
     Button buttonRegister, buttonSignin;
     EditText editTextEmail, editTextPass;
 
-    //FirebaseAuth.AuthStateListener mAuthListener;
+    FirebaseAuth.AuthStateListener mAuthListener;
 
     private MainInterface.Presenter presenter;
 
@@ -26,6 +28,9 @@ public class MainActivity extends AppCompatActivity implements MainInterface.Vie
         setviews();
         presenter = new MainPresenter(this);
         setlisteners();
+        mAuthListener = firebaseAuth -> {
+            presenter.auth();
+        };
     }
 
     private void setviews(){
@@ -59,13 +64,9 @@ public class MainActivity extends AppCompatActivity implements MainInterface.Vie
 
     @Override
     public void loginSuccess() {
+        Toast.makeText(MainActivity.this, "voy a cambiar de pestaña", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(MainActivity.this, PrincipalActivity.class);
         startActivity(intent);
         finish();
-    }
-
-    @Override
-    public void loginError() {
-        Toast.makeText(MainActivity.this, "error en los parametros", Toast.LENGTH_SHORT).show();
     }
 }

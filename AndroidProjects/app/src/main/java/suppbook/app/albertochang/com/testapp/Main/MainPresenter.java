@@ -12,7 +12,7 @@ public class MainPresenter implements MainInterface.Presenter{
 
     public MainPresenter(MainInterface.View view){
         this.view = view;
-        model = new MainModel(this);
+        model = new MainModel();
     }
 
     @Override
@@ -25,21 +25,18 @@ public class MainPresenter implements MainInterface.Presenter{
     }
 
     @Override
-    public void paramError() {
-        view.loginError();
-    }
-
-    @Override
-    public void performLogin() {
-        view.loginSuccess();
-    }
-
-    @Override
     public void validateRegister(String email, String password) {
         if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)){
             view.loginValidations();
         }else{
             model.performRegister(email,password);
+        }
+    }
+
+    @Override
+    public void auth() {
+        if (model.auth()){
+            view.loginSuccess();
         }
     }
 }
